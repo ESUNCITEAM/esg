@@ -1,0 +1,708 @@
+/* 
+ @data 2021-06-02/
+ Author: Borise #8132
+ E.SUN My Discount Area Stylesheet 
+ ----------------------------------- */
+
+/*===============================
+ import
+ ===============================*/    
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap')
+@import "grid"
+@import "normalize"
+
+/*===============================
+ Color
+ ===============================*/
+$color-primary: #3B9C82
+$color-green: #00585C
+$color-white: #ffffff
+$color-yellow: #FFE66D
+$color-black: #323232
+$color-blue: #EDF6F9
+$color-red: #C74444
+.color-red
+    color: $color-red
+
+/*===============================
+ Common
+ ===============================*/
+.title
+    color: $color-primary
+    font-size: 35px
+    letter-spacing: 2px
+    margin: 50px 20px 0 20px
+    i
+        font-style: italic
+    +max_576
+        font-size: 24px
+.line
+    border-top: solid 5px $color-primary
+    width: 100px
+    margin-left: 20px
+    +max_576
+        margin: 10px 0 0 20px
+.content
+    font-size: 18px
+    line-height: 30px
+    margin-left: 20px
+    +max_576
+        font-size: 16px
+        line-height: 25px
+        margin: 10px 20px
+a
+    color: inherit
+/*===============================
+ Setting
+ ===============================*/
+body
+    font-family: 'Roboto','Noto Sans TC','微軟正黑體',sans-serif
+    color: $color-black
+    position: relative
+img
+    width: 100%
+.container
+    max-width: 1200px
+    margin: 0 auto
+
+/*===============================
+ Landing 主視覺
+ ===============================*/
+.landing
+    overflow: hidden
+    position: relative
+    .landingWrap
+        .box
+            height: 600px
+            background-position: center
+            background-size: cover
+            +max_576
+                height: 450px
+            +min_1200
+                height: 80vh
+        .bg1
+            background: url('../../img/landing/landing-01.jpg') no-repeat
+            background-position: center
+            background-size: cover
+        .bg2
+            background: url('../../img/landing/landing-02.jpg') no-repeat
+            background-position: center
+            background-size: cover
+        .bg3
+            background: url('../../img/landing/landing-03.jpg') no-repeat
+            background-position: center
+            background-size: cover
+    .wave
+        position: absolute
+        bottom: -1px
+        left: 0
+        z-index: 3
+    .txtWrap
+        position: absolute
+        z-index: 3
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        top: 30%
+        width: 600px
+        text-align: center
+        h1
+            display: inline-block
+            margin: 0
+            vertical-align: middle
+            padding: 10px
+            color: $color-white
+            font-size: 50px
+            font-weight: 700
+            letter-spacing: 2px
+            background: $color-primary
+        h2
+            display: inline-block
+            margin: 0
+            vertical-align: middle
+            color: $color-white
+            font-size: 24px
+            font-weight: 500
+            text-shadow: 0px 0px 8px #000
+            letter-spacing: 2px
+            border-top: solid 2px $color-white
+            border-bottom: solid 2px $color-white
+            border-right: solid 2px $color-white
+            padding: 22px 30px 22px 20px
+            box-shadow: 0px 0px 10px #00000056
+            border-radius: 0 50px 50px 0
+            margin-left: -3px
+        h3
+            display: inline-block
+            color: $color-white
+            font-size: 24px
+            font-weight: 500
+            line-height: 50px
+            text-shadow: 0px 0px 8px #000
+            strong
+                color: $color-yellow
+                font-weight: 600
+        +max_768
+            width: 400px
+            h1
+                display: block
+                background: #00000082
+                border-bottom: solid 1px $color-white
+            h2
+                display: block
+                border-top: none
+                background: #00000082
+                border: none
+                border-radius: 0 0px 20px 20px
+                margin-left: 0
+            h3
+                font-size: 20px
+                line-height: 40px
+        +max_576
+            width: 300px
+            h1
+                font-size: 36px
+            h2
+                font-size: 20px
+            h3
+                font-size: 16px
+                line-height: 28px
+    .owl-dots
+        display: flex
+        flex-direction: column
+        position: absolute
+        right: 10px
+        top: 50%
+        transform: translateY(-50%)
+        .owl-dot
+            border: solid 1px #ffffff !important
+            width: 10px
+            height: 10px
+            border-radius: 10px
+            margin: 5px
+        .owl-dot.active
+            background: #009E96 !important
+        +max_576
+            flex-direction: row
+            right: auto
+            left: 50%
+            transform: translateX(-50%)
+            top: auto
+            bottom: 10px
+/*===============================
+ MainNav 選單
+ ===============================*/
+.mainNav
+    .container
+        max-width: 800px
+    ul
+        list-style: none
+        display: flex
+        justify-content: center
+        align-items: center
+        margin: 30px 0
+        padding: 0
+        text-align: center
+        padding: 0 10px
+        width: 100%
+        li
+            width: 25%
+            font-size: 18px
+            padding: 10px 20px
+            position: relative
+            cursor: pointer
+            display: flex
+            justify-content: center
+            align-items: center
+            display: block
+            &:hover
+                background: $color-green
+                border-radius: 100px
+                color: $color-white
+                transition: .5s
+                box-shadow: 0px 0px 8px #35353558
+                a
+                    color: $color-white
+
+    +max_576
+        ul
+            position: absolute
+            top: 10px
+            left: 0
+            z-index: 3
+            width: 100%
+            background: #268f62dd
+            justify-content: space-between
+            padding: 0
+            li
+                font-size: 12px
+                border-right: solid 1px #ffffff31
+                padding: 15px 0
+                color: $color-white
+                &:last-child
+                    border-right: none
+                &:hover
+                    box-shadow: none
+                    border-radius: 0
+hr
+    border-top: solid 1px #dedede
+    border-bottom: none
+    width: 100%
+    height: 0
+    +max_576
+        border: none
+.navFixed
+    position: fixed
+    width: 100%
+    top: -40px
+    left: 0
+    z-index: 99
+/*===============================
+ Introduction 概念介紹
+ ===============================*/
+.introduction
+    overflow: hidden
+    //ESG概念介紹卡片
+    .introductionWrap
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        .owl-item
+            display: flex
+            justify-content: center
+            align-items: center
+        .card
+            max-width: 300px
+            height: 450px
+            position: relative
+            background-color: $color-white
+            border-radius: 0 0 20px 20px
+            box-shadow: 0px 0px 12px #2b2b2b61
+            margin: 50px 0
+            overflow: hidden
+            .card-Pic
+                background: #000
+                height: 220px
+                overflow: hidden
+                img
+                    width: 100%
+            h4
+                font-size: 24px
+                color: $color-primary
+                font-style: italic
+                font-weight: 400
+                margin: 15px 20px
+                span
+                    font-style: normal
+                    padding-left: 10px
+                    color: $color-black
+            p
+                font-size: 18px
+                line-height: 30px
+                margin: 0 20px
+                color: $color-black
+            .btn
+                background-color: #3B9C82
+                color: $color-white
+                font-size: 20px
+                font-weight: 300
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                bottom: 20px
+                width: 90%
+                text-align: center
+                padding: 10px
+                border-radius: 5px
+            &:hover
+                box-shadow: 0px 0px 8px #555555
+                transition: .5s
+                .card-Pic
+                    img
+                        width: 120%
+                        transition: .8s
+                        margin: -5% 0 0 -10%
+                .btn
+                    background-color: $color-green
+                    transition: 1s
+            +max_576
+                height: 420px
+                h4
+                    font-size: 20px
+                p
+                    font-size: 14px
+                    line-height: 22px
+        .owl-dots
+            display: flex
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            bottom: 0
+            .owl-dot
+                border: solid 1px #009E96 !important
+                width: 10px
+                height: 10px
+                border-radius: 10px
+                margin: 5px
+            .owl-dot.active
+                background: #009E96 !important
+/*===============================
+ Trend 投資趨勢
+ ===============================*/
+.trendWaveTop
+    margin-top: 100px
+    +max_576
+        margin-top: 40px
+.trend
+    background-color: $color-blue
+    position: relative
+    .title
+        margin-top: -5px
+    .trendWrap
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        margin: 50px 0 0 0
+        .box
+            background: #000
+            max-width: 450px
+            width: 100%
+            height: 270px
+            border-radius: 8px
+            display: flex
+            justify-content: center
+            align-items: center
+            opacity: 0.82
+            box-shadow: 0px 0px 12px #2b2b2b61
+            cursor: pointer
+            position: relative
+            z-index: 3
+            p
+                color: $color-white
+                font-size: 30px
+                border: solid 1px $color-white
+                padding: 20px 30px
+                border-radius: 15px
+                text-shadow: 0px 0px 8px #000
+                letter-spacing: 3px
+            &:hover
+                width: 110%
+                opacity: 1
+                background-size: 170%
+                transition: 1s
+                p
+                    background: #ffffff7c
+        .bg1
+            background: url('../../img/trend-01.jpg') no-repeat
+            background-size: 110%
+        .bg2
+            background: url('../../img/trend-02.jpg') no-repeat
+            background-size: 110%
+        +max_992
+            .box
+                max-width: 350px
+                height: 220px
+        +max_768
+            flex-direction: column
+            .box
+                max-width: 400px
+                margin-top: 20px
+        +max_576
+            margin-top: 20px
+            .box
+                max-width: 300px
+                height: 180px
+                p
+                    font-size: 20px
+                    padding: 10px 40px
+                    border-radius: 50px
+#trees
+    max-width: 500px
+    right: 0
+    bottom: -60%
+    position: absolute
+    +max_768
+        bottom: -30%
+    +min_1200
+        max-width: 55%
+        bottom: -100%
+/*===============================
+ Plan 主題方案
+ ===============================*/
+.plan
+    overflow: hidden
+    margin: 100px 0 20px 0
+    .planWrap
+        position: relative
+        padding-bottom: 50px
+        .box
+            display: flex
+            justify-content: space-around
+            align-items: center
+            flex-direction: column
+            padding: 20px 50px
+            .planCard
+                max-width: 500px
+                width: 100%
+                height: 240px
+                box-shadow: 0px 0px 12px #2b2b2b61
+                background: $color-white
+                margin: 30px 0 0 0
+                padding-top: 15px
+                border-radius: 15px
+                position: relative
+                h5
+                    font-size: 20px
+                    font-weight: 500
+                    margin: 10px 0 8px 0
+                    padding: 0 20px
+                    line-height: 28px
+                    color: $color-black
+                strong
+                    color: $color-red
+                    font-weight: 500
+                p
+                    font-size: 14px
+                    padding: 0 20px
+                .planCard-BtnWrap
+                    display: flex
+                    margin-top: 50px
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 100%
+                    .btnApply,.btnMore
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 50%
+                        font-size: 16px
+                        padding: 13px 0
+                        background-color: #B3B3B3
+                        color: $color-white
+                    .btnApply
+                        background-color: $color-primary
+                        border-radius: 0 0 0 15px
+                    .btnMore
+                        border-radius: 0 0 15px 0
+            +max_992
+                .planCard
+                    max-width: 320px
+                    height: 240px
+            +max_768
+                padding: 20px 50px
+                .planCard
+                    max-width: 400px
+                    height: 240px
+            +max_576
+                padding: 10px 35px
+                .planCard
+                    height: 210px
+                    h5
+                        font-size: 18px
+                        line-height: 24px
+
+    .owl-dots
+        display: flex
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        bottom: 30px
+        .owl-dot
+            border: solid 1px #009E96 !important
+            width: 10px
+            height: 10px
+            border-radius: 10px
+            margin: 5px
+        .owl-dot.active
+            background: #009E96 !important
+    .owl-prev
+        left: -5px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+    .owl-next
+        right: -5px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+/*===============================
+ ESUN ESG 玉見ESG
+ ===============================*/
+.esunesgTop
+    display: block
+    position: relative
+    bottom: -2px
+.esunesg
+    overflow: hidden
+    background: #4FA18B
+    padding-bottom: 20px
+    h4
+        text-align: center
+        padding: 0
+        margin: 0
+        color: $color-white
+        font-size: 50px
+        font-weight: 500
+        +max_576
+            font-size: 30px
+    .wrap
+        background: #ffffffcd
+        display: flex
+        padding: 20px 0
+        margin: 20px
+        border-radius: 30px
+        .content
+            width: 60%
+            border-right: dashed 1px #000
+            padding: 20px
+            tr
+                line-height: 50px
+            th
+                font-size: 20px
+                width: 100px
+                vertical-align: top
+            strong
+                color: $color-red
+
+        .qrcode
+            width: 40%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            img
+                max-width: 150px
+            p
+                font-size: 24px
+                font-weight: 500
+                margin: 5px 0
+                letter-spacing: 1px
+            .download
+                margin-top: 10px
+                background: $color-primary
+                font-size: 20px
+                color: $color-white
+                padding: 8px 50px
+                border-radius: 100px
+        +max_768
+            flex-direction: column
+            .content
+                width: 100%
+                margin-left: 0
+                border-right: none
+                border-bottom: dashed 1px #000
+            .qrcode
+                width: 100%
+                padding-top: 30px
+        +max_576
+            .content
+                th
+                    font-size: 16px
+                tr
+                    line-height: 28px
+            .qrcode
+                img
+                    max-width: 100px
+                p
+                    font-size: 16px
+/*===============================
+ Wraning 注意事項
+ ===============================*/
+.wraning
+    background: #E3E3E3
+    p
+        margin: 0
+        font-size: 24px
+        padding: 20px 0
+        border-bottom: solid 1px #0000006f
+        position: relative
+        cursor: pointer
+        &::after
+            content: ''
+            position: absolute
+            width: 35px
+            height: 20px
+            background: url('../../img/dd.svg') no-repeat
+            background-size: 100%
+            transition: .5s
+            top: 50%
+            right: 0
+            transform: translateY(-50%)
+    .wrap
+        padding: 20px
+        ul
+            list-style: decimal
+            font-size: 16px
+            line-height: 30px
+            li
+                ul
+                    list-style: disc
+                    margin-left: -40px
+                a
+                    color: blue
+                    text-decoration: underline
+    +max_576
+        p
+            font-size: 20px
+            &::after
+                width: 26px
+        .wrap
+            ul
+                li
+                    font-size: 14px
+                    line-height: 24px
+.wraning_active
+    p
+        &::after
+            transform: rotate(180deg) !important
+            transition: .5s
+            top: 30%
+/*===============================
+ Fancybox 彈跳視窗
+ ===============================*/
+.popup
+    display: none
+    .popup-wrap
+        padding: 40px
+        .popup-title
+            font-size: 24px
+            font-weight: 500
+            strong
+                color: $color-red
+                font-weight: 500
+        .popup-subTitle
+            color: $color-primary
+            font-size: 20px
+            margin: 0
+            padding-top: 20px
+        .popup-subContent
+            color: $color-black
+            font-size: 16px
+            margin: 5px 0 0 0
+        .popup-content
+            font-size: 16px
+            padding-top: 10px
+            line-height: 28px
+        span
+            font-size: 12px
+        .popup-line
+            width: 100px
+            height: 4px
+            background: $color-primary
+            margin: 10px 0 0 0
+        hr
+            border-top: dashed 1px #000
+        img
+            padding-top: 20px
+    .popup-list
+        background: #F0F0F0
+        padding: 40px
+        font-size: 14px
+        line-height: 24px
+        strong
+            font-weight: 600
+        a
+            color: blue
+            text-decoration: underline
